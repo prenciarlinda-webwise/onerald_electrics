@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: #1a1a2e;
+    background: #ffffff;
+  }
+}
+
+@layer utilities {
+  .orange-glow {
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.15);
+  }
+
+  .orange-glow-strong {
+    box-shadow: 0 0 60px rgba(249, 115, 22, 0.25);
+  }
+
+  .gradient-orange {
+    background: linear-gradient(135deg, #F97316 0%, #ea580c 100%);
+  }
+
+  .gradient-orange-light {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(249, 115, 22, 0.1) 100%);
+  }
+
+  .text-gradient-orange {
+    background: linear-gradient(135deg, #F97316 0%, #ea580c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
