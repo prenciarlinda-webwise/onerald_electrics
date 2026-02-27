@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "Kryefaqja" },
   { href: "/sherbimet", label: "Shërbimet" },
+  { href: "/blog", label: "Blog" },
   { href: "/rreth-nesh", label: "Rreth Nesh" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -38,9 +39,9 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  pathname === link.href
-                    ? "text-orange-500 bg-orange-50"
-                    : "text-charcoal hover:text-orange-500 hover:bg-orange-50"
+                  link.href === "/"
+                    ? pathname === "/" ? "text-orange-500 bg-orange-50" : "text-charcoal hover:text-orange-500 hover:bg-orange-50"
+                    : pathname.startsWith(link.href) ? "text-orange-500 bg-orange-50" : "text-charcoal hover:text-orange-500 hover:bg-orange-50"
                 }`}
               >
                 {link.label}
@@ -50,7 +51,7 @@ export default function Navbar() {
 
           {/* WhatsApp CTA */}
           <a
-            href="https://wa.me/355123456789?text=Përshëndetje!%20Dua%20të%20marr%20një%20ofertë."
+            href="https://wa.me/355696444453?text=Përshëndetje!%20Dua%20të%20marr%20një%20ofertë."
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 gradient-orange text-white text-sm font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all"
@@ -89,16 +90,16 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                  pathname === link.href
-                    ? "text-orange-500 bg-orange-50"
-                    : "text-charcoal hover:text-orange-500 hover:bg-orange-50"
+                  link.href === "/"
+                    ? pathname === "/" ? "text-orange-500 bg-orange-50" : "text-charcoal hover:text-orange-500 hover:bg-orange-50"
+                    : pathname.startsWith(link.href) ? "text-orange-500 bg-orange-50" : "text-charcoal hover:text-orange-500 hover:bg-orange-50"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
             <a
-              href="https://wa.me/355123456789?text=Përshëndetje!%20Dua%20të%20marr%20një%20ofertë."
+              href="https://wa.me/355696444453?text=Përshëndetje!%20Dua%20të%20marr%20një%20ofertë."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 mt-2 px-5 py-3 gradient-orange text-white text-sm font-semibold rounded-full"

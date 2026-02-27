@@ -31,7 +31,7 @@ export default function Home() {
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a
-                href="https://wa.me/355123456789?text=Përshëndetje!%20Dua%20të%20marr%20një%20ofertë."
+                href="https://wa.me/355696444453?text=Përshëndetje!%20Dua%20të%20marr%20një%20ofertë."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 gradient-orange text-white font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all text-lg"
@@ -79,7 +79,7 @@ export default function Home() {
                 Diagnostikim i saktë dhe zgjidhje të qëndrueshme.
               </p>
               <Link
-                href="/sherbimet"
+                href="/sherbimet/riparime-elektrike"
                 className="inline-flex items-center gap-2 text-orange-500 font-semibold group-hover:gap-3 transition-all"
               >
                 Mëso Më Shumë
@@ -103,7 +103,7 @@ export default function Home() {
                 Skema profesionale sipas standardeve më të larta.
               </p>
               <Link
-                href="/sherbimet"
+                href="/sherbimet/planifikim-elektrik"
                 className="inline-flex items-center gap-2 text-orange-500 font-semibold group-hover:gap-3 transition-all"
               >
                 Mëso Më Shumë
@@ -160,6 +160,84 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Latest from Blog */}
+      <section className="py-20 sm:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
+              Nga <span className="text-gradient-orange">Blogu</span>
+            </h2>
+            <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
+              Këshilla dhe artikuj profesionalë rreth sistemeve elektrike
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                slug: "si-te-kurseni-energji-elektrike-ne-shtepi",
+                title: "Si të kurseni energji elektrike në shtëpi",
+                excerpt: "Zbuloni këshilla të thjeshta por efektive për të reduktuar konsumin e energjisë elektrike.",
+                date: "2025-12-15",
+              },
+              {
+                slug: "shenjat-e-problemeve-elektrike-ne-shtepi",
+                title: "Shenjat e problemeve elektrike në shtëpi",
+                excerpt: "Mos i injoroni këto shenja paralajmëruese që mund të tregojnë probleme serioze.",
+                date: "2025-11-15",
+              },
+              {
+                slug: "siguria-elektrike-per-femijet",
+                title: "Siguria elektrike për fëmijët",
+                excerpt: "Mbroni fëmijët tuaj nga rreziqet elektrike me këto masa sigurie të rëndësishme.",
+                date: "2025-11-08",
+              },
+            ].map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group bg-white rounded-2xl border border-gray-100 hover:border-orange-200 hover:orange-glow transition-all duration-300 overflow-hidden flex flex-col"
+              >
+                <div className="h-1.5 gradient-orange" />
+                <div className="p-6 flex-1 flex flex-col">
+                  <time className="text-xs text-gray-400 font-medium">
+                    {new Date(post.date).toLocaleDateString("sq-AL", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                  <h3 className="text-lg font-bold text-charcoal mt-2 mb-3 group-hover:text-orange-500 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                    {post.excerpt}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-orange-500 font-semibold text-sm mt-4 group-hover:gap-3 transition-all">
+                    Lexo më shumë
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-orange-500 text-orange-500 font-semibold rounded-full hover:bg-orange-50 transition-all"
+            >
+              Shiko të gjitha artikujt
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Banner */}
       <section className="py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -171,7 +249,7 @@ export default function Home() {
               Na kontaktoni tani në WhatsApp për një ofertë të shpejtë dhe pa detyrime.
             </p>
             <a
-              href="https://wa.me/355123456789?text=Përshëndetje!%20Dua%20të%20marr%20një%20ofertë."
+              href="https://wa.me/355696444453?text=Përshëndetje!%20Dua%20të%20marr%20një%20ofertë."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-10 py-4 bg-white text-orange-500 font-bold rounded-full hover:shadow-xl hover:scale-105 transition-all text-lg"

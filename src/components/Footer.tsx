@@ -31,6 +31,7 @@ export default function Footer() {
               {[
                 { href: "/", label: "Kryefaqja" },
                 { href: "/sherbimet", label: "Shërbimet" },
+                { href: "/blog", label: "Blog" },
                 { href: "/rreth-nesh", label: "Rreth Nesh" },
                 { href: "/kontakt", label: "Kontakt" },
               ].map((link) => (
@@ -52,8 +53,22 @@ export default function Footer() {
               Shërbimet
             </h3>
             <ul className="space-y-3">
-              <li className="text-gray-400 text-sm">Riparime Elektrike</li>
-              <li className="text-gray-400 text-sm">Planifikim Elektrik</li>
+              <li>
+                <Link
+                  href="/sherbimet/riparime-elektrike"
+                  className="text-gray-400 hover:text-orange-400 transition-colors text-sm"
+                >
+                  Riparime Elektrike
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/sherbimet/planifikim-elektrik"
+                  className="text-gray-400 hover:text-orange-400 transition-colors text-sm"
+                >
+                  Planifikim Elektrik
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -82,7 +97,7 @@ export default function Footer() {
             {/* Social placeholder */}
             <div className="flex gap-3 mt-6">
               <a
-                href="https://wa.me/355123456789"
+                href="https://wa.me/355696444453"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-500 transition-colors"
@@ -119,6 +134,17 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-12 pt-8 text-center">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Onerald Electrics. Të gjitha të drejtat e rezervuara.
+          </p>
+          <p className="text-gray-600 text-xs mt-2">
+            Built by{" "}
+            <a
+              href="https://www.websiteandseoagency.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-400 hover:text-orange-300 transition-colors"
+            >
+              Web Wise
+            </a>
           </p>
         </div>
       </div>

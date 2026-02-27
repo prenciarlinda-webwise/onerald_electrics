@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Shërbimet - Onerald Electrics",
+  title: "Shërbimet - Onerald Electrics | Riparime & Planifikim Elektrik",
   description:
-    "Riparime elektrike dhe planifikim elektrik profesional në Dibër dhe Tiranë.",
+    "Riparime elektrike dhe planifikim elektrik profesional në Dibër dhe Tiranë. Shërbime cilësore për shtëpi dhe biznese.",
 };
 
 export default function Sherbimet() {
@@ -27,7 +28,7 @@ export default function Sherbimet() {
         </div>
       </section>
 
-      {/* Services Detail */}
+      {/* Services */}
       <section className="py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {/* Riparime Elektrike */}
@@ -43,13 +44,12 @@ export default function Sherbimet() {
                   <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-4">
                     Riparime Elektrike
                   </h2>
-                  <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                  <p className="text-gray-600 text-lg leading-relaxed mb-6">
                     Ekipi ynë i kualifikuar ofron riparime të shpejta dhe të sigurta për çdo lloj
                     problemi elektrik. Punojmë me efikasitet të lartë për të minimizuar ndërprerjet
                     në jetën tuaj të përditshme.
                   </p>
 
-                  <h3 className="text-lg font-semibold text-charcoal mb-4">Çfarë përfshihet:</h3>
                   <ul className="grid sm:grid-cols-2 gap-3 mb-8">
                     {[
                       "Diagnostikim i defekteve elektrike",
@@ -57,9 +57,7 @@ export default function Sherbimet() {
                       "Riparim i tabelës elektrike",
                       "Zëvendësim i kabllove të dëmtuara",
                       "Riparim i ndriçimit",
-                      "Zgjidhje për shkëputje të energjisë",
-                      "Riparime urgjente 24/7",
-                      "Kontroll i sigurisë elektrike",
+                      "Shërbim urgjent",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="flex-shrink-0 mt-0.5">
@@ -71,18 +69,15 @@ export default function Sherbimet() {
                     ))}
                   </ul>
 
-                  <a
-                    href="https://wa.me/355123456789?text=Përshëndetje!%20Më%20intereson%20shërbimi%20i%20riparimeve%20elektrike."
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/sherbimet/riparime-elektrike"
                     className="inline-flex items-center gap-2 px-8 py-3.5 gradient-orange text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all"
                   >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.527 5.86L.06 23.708l5.992-1.57A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.963 0-3.83-.53-5.47-1.498l-.392-.234-4.064 1.065 1.084-3.96-.256-.407A9.787 9.787 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/>
+                    Mëso Më Shumë
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
-                    Kërko Ofertë
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -102,22 +97,19 @@ export default function Sherbimet() {
                   <h2 className="text-2xl sm:text-3xl font-bold text-charcoal mb-4">
                     Planifikim Elektrik
                   </h2>
-                  <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                  <p className="text-gray-600 text-lg leading-relaxed mb-6">
                     Krijojmë plane elektrike profesionale për ndërtime të reja, rinovime dhe
                     zgjerime. Çdo projekt planifikohet me kujdes duke respektuar standardet
                     e sigurisë dhe efikasitetit.
                   </p>
 
-                  <h3 className="text-lg font-semibold text-charcoal mb-4">Çfarë përfshihet:</h3>
                   <ul className="grid sm:grid-cols-2 gap-3 mb-8">
                     {[
                       "Hartim i skemës elektrike",
-                      "Përllogaritje e ngarkesave elektrike",
+                      "Përllogaritje e ngarkesave",
                       "Planifikim i tabelës elektrike",
                       "Projekt për ndriçim interior",
-                      "Planifikim për sisteme sigurie",
                       "Konsulencë teknike",
-                      "Mbikëqyrje e instalimeve",
                       "Dokumentacion teknik i plotë",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3">
@@ -130,18 +122,15 @@ export default function Sherbimet() {
                     ))}
                   </ul>
 
-                  <a
-                    href="https://wa.me/355123456789?text=Përshëndetje!%20Më%20intereson%20shërbimi%20i%20planifikimit%20elektrik."
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/sherbimet/planifikim-elektrik"
                     className="inline-flex items-center gap-2 px-8 py-3.5 gradient-orange text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all"
                   >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.126 1.527 5.86L.06 23.708l5.992-1.57A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.963 0-3.83-.53-5.47-1.498l-.392-.234-4.064 1.065 1.084-3.96-.256-.407A9.787 9.787 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/>
+                    Mëso Më Shumë
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
-                    Kërko Ofertë
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -149,8 +138,50 @@ export default function Sherbimet() {
         </div>
       </section>
 
+      {/* Related Blog Posts */}
+      <section className="py-16 sm:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-charcoal">
+              Artikuj të <span className="text-gradient-orange">dobishëm</span>
+            </h2>
+            <p className="mt-4 text-gray-600 text-lg">
+              Lexoni këshilla dhe udhëzues rreth sistemeve elektrike
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { slug: "kur-duhet-te-ndryshoni-instalimet-elektrike", title: "Kur duhet të ndryshoni instalimet elektrike?", excerpt: "Mësoni kur është koha për të ndryshuar instalimet elektrike." },
+              { slug: "planifikimi-elektrik-per-ndertesa-te-reja", title: "Planifikimi elektrik për ndërtesa të reja", excerpt: "Udhëzues i plotë për planifikimin e sistemit elektrik." },
+              { slug: "kontrolli-periodik-i-sistemit-elektrik", title: "Kontrolli periodik i sistemit elektrik", excerpt: "Pse kontrolli i rregullt është i domosdoshëm për sigurinë." },
+            ].map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-orange-200 hover:orange-glow transition-all duration-300 block"
+              >
+                <h3 className="font-bold text-charcoal mb-2 group-hover:text-orange-500 transition-colors">{post.title}</h3>
+                <p className="text-gray-600 text-sm mb-3">{post.excerpt}</p>
+                <span className="text-orange-500 text-sm font-semibold">Lexo më shumë →</span>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-orange-500 font-semibold hover:gap-3 transition-all"
+            >
+              Shiko të gjitha artikujt
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-20 sm:py-28 bg-gray-50">
+      <section className="py-20 sm:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">
             Nuk jeni i sigurt çfarë ju nevojitet?
@@ -159,7 +190,7 @@ export default function Sherbimet() {
             Na kontaktoni dhe ne do t&apos;ju ndihmojmë të gjeni zgjidhjen e duhur për ju.
           </p>
           <a
-            href="https://wa.me/355123456789?text=Përshëndetje!%20Kam%20nevojë%20për%20konsulencë%20elektrike."
+            href="https://wa.me/355696444453?text=Përshëndetje!%20Kam%20nevojë%20për%20konsulencë%20elektrike."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-4 gradient-orange text-white font-bold rounded-full hover:shadow-xl hover:scale-105 transition-all text-lg"
