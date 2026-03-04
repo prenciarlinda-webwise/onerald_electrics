@@ -52,7 +52,7 @@ export default function Kontakt() {
                   përgjigjemi brenda disa minutave.
                 </p>
                 <a
-                  href="https://wa.me/355123456789?text=Përshëndetje!%20Dua%20të%20marr%20një%20ofertë."
+                  href="https://wa.me/355696444453?text=Përshëndetje!%20Dua%20të%20marr%20një%20ofertë."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-3.5 bg-green-500 text-white font-semibold rounded-full hover:bg-green-600 hover:shadow-lg hover:scale-105 transition-all"
@@ -75,8 +75,8 @@ export default function Kontakt() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-charcoal">Telefon</h3>
-                    <a href="tel:+355123456789" className="text-orange-500 font-medium hover:underline">
-                      +355 12 345 6789
+                    <a href="tel:+355696444453" className="text-orange-500 font-medium hover:underline">
+                      +355 69 644 4453
                     </a>
                   </div>
                 </div>
